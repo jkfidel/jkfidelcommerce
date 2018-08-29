@@ -5,15 +5,36 @@
     <p>axaxdacedas</p>
   </mat-sidenav>
 
-  <mat-sidenav-content>
+  <mat-sidenav-content class="container">
     <mat-toolbar>
       <mat-toolbar-row>
         <p>
-          <button mat-button (click)="sidenav.toggle()">
+          <button mat-button class="mbar" (click)="sidenav.toggle()">
             <mat-icon svgIcon="menbar"></mat-icon>
           </button>
         </p>
-        <span>Welcome to our LoremIpsum Store</span>
+        <span class="wc">Welcome to our LoremIpsum Store</span>
+        <span class="example-spacer"></span>
+        <button mat-button class="rytcon" [matMenuTriggerFor]="menu">
+          <mat-icon svgIcon="acnt" class="acnt"></mat-icon>
+          <span> My Account</span>
+        </button>
+        <div style="top:35px;">
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item>
+              <mat-icon>dialpad</mat-icon>
+              <span>Redial</span>
+            </button>
+            <button mat-menu-item disabled>
+              <mat-icon>voicemail</mat-icon>
+              <span>Check voicemail</span>
+            </button>
+            <button mat-menu-item>
+              <mat-icon>notifications_off</mat-icon>
+              <span>Disable alerts</span>
+            </button>
+          </mat-menu>
+        </div>
       </mat-toolbar-row>
     </mat-toolbar>
   </mat-sidenav-content>

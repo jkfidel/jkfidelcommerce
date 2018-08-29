@@ -13,5 +13,9 @@ export class CustomIconService {
       "cool_face",
       this.domSanitizer.bypassSecurityTrustResourceUrl("../../../assets/cool2.svg")
     );
+    this.matIconRegistry.addSvgIcon(
+      "acnt",
+      this.domSanitizer.bypassSecurityTrustResourceUrl("../../assets/acnt.svg")
+    );
   }
 }

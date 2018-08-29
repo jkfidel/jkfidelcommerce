@@ -14,9 +14,14 @@
 }
 .mat-toolbar{
 	min-height: 35px;
+  background: none;
 }
 .mat-toolbar-row{
 	height: 35px;
+}
+::ng-deep .cdk-overlay-container .cdk-overlay-pane {
+    /* Do you changes here */
+    top: 35px !important;
 }
 .mat-toolbar p{
 	margin: 0;
@@ -27,7 +32,41 @@
 }
 .mat-toolbar p, .mat-toolbar span {
 	font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  color: #808080;
 }
 .mat-icon{
   margin-top: -10px;
+}
+.acnt{
+  margin-top: -15px;  
+}
+.mat-button{
+  min-width: 40px;
+  width: 40px;
+  padding: 0;
+}
+.rytcon {
+  width: 120px;
+  font-family: 'Montserrat', sans-serif;
+}
+.rytcon span{
+  color: #000;
+}
+.example-spacer {
+    flex: 1 1 auto;
+}
+@media(min-width: 958px){
+  .mbar {
+    display: none;
+  }
+}
+@media(max-width: 767px){
+  .mat-toolbar-row{
+    padding: 0;
+  }
+  .wc{ display: none; }
+  .container {
+    max-width: 740px;
+  }
 }
