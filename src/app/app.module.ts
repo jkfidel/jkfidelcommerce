@@ -8,7 +8,6 @@ import { MatToolbarModule, MatSidenavModule, MatFormFieldModule, MatInputModule,
 import { HttpClientModule } from "@angular/common/http";
 import { CustomIconService } from './services/custom-icon-service';
 
-
 @NgModule({
   declarations: [
     AppComponent,
