@@ -1,56 +1,56 @@
 <mat-sidenav-container class="example-container">
   <mat-sidenav #sidenav>
-    <p>axaxdacedas</p>
-    <p>axaxdacedas</p>
-    <p>axaxdacedas</p>
+    <p>HOME</p>
+    <p>SHOP</p>
+    <p>CONTACT</p>
+    <p>ABOUT US</p>
   </mat-sidenav>
-
-  <mat-sidenav-content class="container">
+  <mat-sidenav-content >
     <mat-toolbar>
-      <mat-toolbar-row>
-        <p>
-          <button mat-button class="mbar" (click)="sidenav.toggle()">
-            <mat-icon svgIcon="menbar"></mat-icon>
+        <div class="top-tool">
+          <mat-toolbar-row class="container">
+          <p>
+            <button mat-button class="mbar" (click)="sidenav.toggle()">
+              <mat-icon svgIcon="menbar"></mat-icon>
+            </button>
+          </p>
+          <span class="wc">Welcome to our LoremIpsum Store</span>
+          <span class="example-spacer"></span>
+          <button mat-button class="rytcon" [matMenuTriggerFor]="menu">
+            <mat-icon svgIcon="acnt" class="acnt"></mat-icon>
+            <span> My Account</span>
           </button>
-        </p>
-        <span class="wc">Welcome to our LoremIpsum Store</span>
-        <span class="example-spacer"></span>
-        
-        <button mat-button class="rytcon" [matMenuTriggerFor]="menu">
-          <mat-icon svgIcon="acnt" class="acnt"></mat-icon>
-          <span> My Account</span>
-        </button>
-        <button mat-button class="rytcon bask" [matMenuTriggerFor]="cart">
-          <mat-icon svgIcon="bask"></mat-icon>
-          <span class="badge badge-pill badge-dark">7</span>
-        </button>
-        <mat-menu #menu="matMenu">
-          <button mat-menu-item>
-            <mat-icon svgIcon="sett"></mat-icon>
-            <span>Account Settings</span>
+          <button mat-button class="rytcon" [matMenuTriggerFor]="cart">
+            <mat-icon svgIcon="bask"></mat-icon>
+            <span> Cart </span>
+            <span class="badge badge-pill badge-dark">7</span>
           </button>
-          <button mat-menu-item>
-            <mat-icon svgIcon="hrt"></mat-icon>
-            <span> Wishlist</span>
-          </button>
-        </mat-menu>
-
-      </mat-toolbar-row>
-      <mat-toolbar-row class="mid-ro">
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item>
+              <mat-icon svgIcon="sett"></mat-icon>
+              <span>Account Settings</span>
+            </button>
+            <button mat-menu-item>
+              <mat-icon svgIcon="hrt"></mat-icon>
+              <span> Wishlist</span>
+            </button>
+          </mat-menu>
+          <mat-menu #cart="matMenu">
+            <button mat-menu-item>
+              <!-- <mat-icon svgIcon="sett"></mat-icon> -->
+              <span>Account Settings</span>
+            </button>
+          </mat-menu>
+        </mat-toolbar-row>
+        </div>
+      <mat-toolbar-row class="mid-ro container">
         <span class="brand">Lorem</span>
-        <!-- <form class="example-form title-center">
-          <mat-form-field class="example-full-width">
-            <input placeholder="Search">
-          </mat-form-field>
-        </form> -->
         <span class="example-spacer"></span>
+        <button mat-button><span class="nav-men">HOME</span></button>
+        <button mat-button><span class="nav-men">SHOP</span></button>
+        <button mat-button><span class="nav-men">CONTACT</span></button>
+        <button mat-button><span class="nav-men">ABOUT US</span></button>
         
-        <mat-menu #cart="matMenu">
-          <button mat-menu-item>
-            <!-- <mat-icon svgIcon="sett"></mat-icon> -->
-            <span>Account Settings</span>
-          </button>
-        </mat-menu>
       </mat-toolbar-row>
     </mat-toolbar>
   </mat-sidenav-content>

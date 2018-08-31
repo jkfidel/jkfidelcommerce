@@ -5,7 +5,9 @@
   left: 0;
   right: 0;
 }
-
+.top-tool{
+  border-bottom: 1px solid #d3d3d3;
+}
 .example-radio-group {
   display: block;
   border: 1px solid #555;
@@ -73,8 +75,23 @@
   color: #fff !important;
   padding: 3px 6px;
 }
+.mid-ro .mat-button{
+  min-width: 75px;
+  width: 90px !important;
+}
+.mid-ro{
+  height: 80px !important;
+}
+.nav-men{
+  font-weight: initial !important;
+}
 @media(min-width: 958px){
-  .mbar {
+  .mbar{
+    display: none;
+  }
+}
+@media(max-width: 957px){
+  .mid-ro .mat-button{
     display: none;
   }
 }
