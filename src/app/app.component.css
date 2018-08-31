@@ -67,6 +67,7 @@
 .brand{
   font-size: 20px !important;
   font-weight: bold;
+  color: #808080 !important;
 }
 .title-center{
   margin: 0 auto;
@@ -77,13 +78,17 @@
 }
 .mid-ro .mat-button{
   min-width: 75px;
-  width: 90px !important;
+  width: 100px !important;
 }
 .mid-ro{
   height: 80px !important;
 }
 .nav-men{
   font-weight: initial !important;
+  font-size: 16px !important;
+}
+.act{
+  border-bottom: 5px solid #d3d3d3;
 }
 @media(min-width: 958px){
   .mbar{
@@ -91,7 +96,7 @@
   }
 }
 @media(max-width: 957px){
-  .mid-ro .mat-button{
+  .mid-ro .mat-button, .mid-ro .brand{
     display: none;
   }
 }
