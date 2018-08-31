@@ -18,6 +18,18 @@ export class AppComponent {
       "menbar",
       this.domSanitizer.bypassSecurityTrustResourceUrl("../../assets/menu_bar.svg")
     );
+    this.matIconRegistry.addSvgIcon(
+      "hrt",
+      this.domSanitizer.bypassSecurityTrustResourceUrl("../../assets/heart-regular.svg")
+    );
+    this.matIconRegistry.addSvgIcon(
+      "sett",
+      this.domSanitizer.bypassSecurityTrustResourceUrl("../../assets/sett.svg")
+    );
+    this.matIconRegistry.addSvgIcon(
+      "bask",
+      this.domSanitizer.bypassSecurityTrustResourceUrl("../../assets/bask.svg")
+    );
     this.customIconService.init();
   }
 }
