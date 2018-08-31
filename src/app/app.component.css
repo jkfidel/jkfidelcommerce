@@ -50,11 +50,28 @@
   width: 120px;
   font-family: 'Montserrat', sans-serif;
 }
+.bask{
+  width: 40px;
+}
+::ng-deep .mat-badge-content0{
+  right: 0 !important;
+}
 .rytcon span{
   color: #000;
 }
 .example-spacer {
     flex: 1 1 auto;
+}
+.brand{
+  font-size: 20px !important;
+  font-weight: bold;
+}
+.title-center{
+  margin: 0 auto;
+}
+.badge-dark{
+  color: #fff !important;
+  padding: 3px 6px;
 }
 @media(min-width: 958px){
   .mbar {
@@ -69,4 +86,6 @@
   .container {
     max-width: 740px;
   }
+  .rytcon{ width: 40px; }
+  .rytcon span{ display: none; }
 }

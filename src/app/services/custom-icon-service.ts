@@ -17,5 +17,17 @@ export class CustomIconService {
       "acnt",
       this.domSanitizer.bypassSecurityTrustResourceUrl("../../assets/acnt.svg")
     );
+    this.matIconRegistry.addSvgIcon(
+      "hrt",
+      this.domSanitizer.bypassSecurityTrustResourceUrl("../../assets/heart-regular.svg")
+    );
+    this.matIconRegistry.addSvgIcon(
+      "sett",
+      this.domSanitizer.bypassSecurityTrustResourceUrl("../../assets/sett.svg")
+    );
+    this.matIconRegistry.addSvgIcon(
+      "bask",
+      this.domSanitizer.bypassSecurityTrustResourceUrl("../../assets/bask.svg")
+    );
   }
 }

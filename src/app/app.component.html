@@ -15,26 +15,42 @@
         </p>
         <span class="wc">Welcome to our LoremIpsum Store</span>
         <span class="example-spacer"></span>
+        
         <button mat-button class="rytcon" [matMenuTriggerFor]="menu">
           <mat-icon svgIcon="acnt" class="acnt"></mat-icon>
           <span> My Account</span>
         </button>
-        <div style="top:35px;">
-          <mat-menu #menu="matMenu">
-            <button mat-menu-item>
-              <mat-icon>dialpad</mat-icon>
-              <span>Redial</span>
-            </button>
-            <button mat-menu-item disabled>
-              <mat-icon>voicemail</mat-icon>
-              <span>Check voicemail</span>
-            </button>
-            <button mat-menu-item>
-              <mat-icon>notifications_off</mat-icon>
-              <span>Disable alerts</span>
-            </button>
-          </mat-menu>
-        </div>
+        <button mat-button class="rytcon bask" [matMenuTriggerFor]="cart">
+          <mat-icon svgIcon="bask"></mat-icon>
+          <span class="badge badge-pill badge-dark">7</span>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>
+            <mat-icon svgIcon="sett"></mat-icon>
+            <span>Account Settings</span>
+          </button>
+          <button mat-menu-item>
+            <mat-icon svgIcon="hrt"></mat-icon>
+            <span> Wishlist</span>
+          </button>
+        </mat-menu>
+
+      </mat-toolbar-row>
+      <mat-toolbar-row class="mid-ro">
+        <span class="brand">Lorem</span>
+        <!-- <form class="example-form title-center">
+          <mat-form-field class="example-full-width">
+            <input placeholder="Search">
+          </mat-form-field>
+        </form> -->
+        <span class="example-spacer"></span>
+        
+        <mat-menu #cart="matMenu">
+          <button mat-menu-item>
+            <!-- <mat-icon svgIcon="sett"></mat-icon> -->
+            <span>Account Settings</span>
+          </button>
+        </mat-menu>
       </mat-toolbar-row>
     </mat-toolbar>
   </mat-sidenav-content>
