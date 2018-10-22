@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { MatIconRegistry } from "@angular/material/icon";
 import { DomSanitizer } from "@angular/platform-browser";
 import { CustomIconService } from './services/custom-icon-service';
+import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -9,11 +10,18 @@ import { CustomIconService } from './services/custom-icon-service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  currentUrl: string;
   constructor(
     private matIconRegistry: MatIconRegistry,
     private domSanitizer: DomSanitizer,
-    private customIconService: CustomIconService
+    private customIconService: CustomIconService,
+    private router: Router
   ){
+    this.customIconService.init();
+    router.events.subscribe((_: NavigationEnd) => {
+      this.currentUrl = _.url;
+      // console.log(this.currentUrl);
+    });
     this.matIconRegistry.addSvgIcon(
       "menbar",
       this.domSanitizer.bypassSecurityTrustResourceUrl("../../assets/menu_bar.svg")
@@ -30,6 +38,6 @@ export class AppComponent {
       "bask",
       this.domSanitizer.bypassSecurityTrustResourceUrl("../../assets/bask.svg")
     );
-    this.customIconService.init();
+    
   }
 }

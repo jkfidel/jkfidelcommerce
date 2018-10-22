@@ -1,0 +1,132 @@
+<!-- <mat-sidenav-container class="categ-container">
+
+  <mat-sidenav #sidenav>
+    <p><span class="brand">Lorem</span></p>
+    <p>HOME</p>
+  </mat-sidenav>
+
+  <mat-sidenav-content >
+    <mat-toolbar>
+        <mat-toolbar-row class="top-tool">
+          <div class="container">
+            <mat-toolbar-row>
+	            <button mat-button class="mbarcat" (click)="sidenav.toggle()">
+	              <mat-icon>more_vert</mat-icon>
+	            </button>
+	          
+	        </mat-toolbar-row>
+          </div>
+        </mat-toolbar-row>
+      
+    </mat-toolbar>
+    <div class="container">
+    	<p>
+		  shop works!
+		</p>
+    </div>
+  </mat-sidenav-content>
+
+</mat-sidenav-container>
+ -->
+<div class="container" >
+  <mat-sidenav-container class="example-container">
+  <mat-sidenav #sidenav [mode]="mode.value" [opened]="op.value">
+    <mat-accordion multi>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            All Categories
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+      </mat-expansion-panel>
+      <mat-expansion-panel (opened)="panelOpenState = true"
+                           (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Prices
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <!-- <p>I'm visible because I am open</p> -->
+      </mat-expansion-panel>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Designers
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+      </mat-expansion-panel>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Size
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+      </mat-expansion-panel>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Colour
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+      </mat-expansion-panel>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Sale
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+      </mat-expansion-panel>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Material
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+      </mat-expansion-panel>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Sort By
+          </mat-panel-title>
+          <mat-panel-description>Bestseller</mat-panel-description>
+        </mat-expansion-panel-header>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <p><button mat-button class="sidenavcat" (click)="sidenav.toggle()">
+      <mat-icon>more_vert</mat-icon>
+    </button></p>
+    <mat-radio-group class="example-radio-group" [formControl]="mode">
+      <mat-radio-button value="over">Over</mat-radio-button>
+      <mat-radio-button value="side">Side</mat-radio-button>
+    </mat-radio-group>
+    <mat-radio-group class="example-radio-group2" [formControl]="op">
+      <mat-radio-button value="true">Over</mat-radio-button>
+      <mat-radio-button value="false">Side</mat-radio-button>
+    </mat-radio-group>
+    <div class="products-wrapper ng-star-inserted" fxlayout="row wrap" style="flex-flow: row wrap;
+    box-sizing: border-box;
+    display: flex;">
+      <div class="col ng-star-inserted" fxflex="100" fxflex.sm="50">
+        <mat-form-field class="search-form">
+          <input matInput placeholder="Search Picture" type="text">
+        </mat-form-field>
+        <button button="submit" mat-raised-button color="primary">Search</button>
+        <br>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center">
+          <mat-card class="card-picture" *ngFor="let picture of pictures">
+            <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column">
+              <span fxFlex="80%">{{picture.title}}</span>
+              <mat-icon fxFlex="10%">mode_edit</mat-icon>
+              <mat-icon fxFlex="10%">delete</mat-icon>
+            </mat-card-title>
+            <img mat-card-image [src]="picture.img">
+          </mat-card>
+        </div>
+      </div>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+</div>

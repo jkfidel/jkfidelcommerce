@@ -1,0 +1,53 @@
+.mbarcat{
+    min-width: 40px;
+    padding: 0;
+}
+.categ-container {
+  position: absolute;
+  top: 115px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #eee;
+}
+.categ-side{
+  min-width: 250px;
+  padding: 8px 16px;
+}
+.sidenavcat, .example-radio-group, .example-radio-group2{
+  display: none;
+}
+.demo-con{
+  min-height: 128px;
+  padding-bottom: 40px;
+  display: block;
+}
+.sidenavcat.mat-button {
+    min-width: 40px;
+    padding: 0;
+}
+.large div.one, .large div.two {
+    color: #fff;
+}
+.one, div.colored>div:first-child {
+    background-color: #009688;
+}
+.two, div.colored>div:nth-child(2) {
+    background-color: #3949ab;
+}
+@media(max-width: 957px){
+	.categ-container {
+		top: 35px;
+	}
+  .container{
+    max-width: 957px !important;
+  }
+  .sidenavcat{
+    display: block;
+  }
+}
+.categ-container mat-sidenav.mat-drawer.mat-sidenav.ng-tns-c2-3.ng-trigger.ng-trigger-transform.mat-drawer-side.ng-star-inserted{
+	transform: translate3d(0px, 0px, 0px);
+    visibility: visible;
+}
+    
