@@ -19,6 +19,7 @@ import { WindowRef } from './components/shop/WindowRef';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {FlexLayoutModule} from '@angular/flex-layout';
 
+import { Ng5SliderModule } from 'ng5-slider';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import {FlexLayoutModule} from '@angular/flex-layout';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    Ng5SliderModule
   ],
   providers: [CustomIconService, SidenavService, WindowRef ],
   bootstrap: [AppComponent]

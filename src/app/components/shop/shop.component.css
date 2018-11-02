@@ -35,6 +35,10 @@
 .two, div.colored>div:nth-child(2) {
     background-color: #3949ab;
 }
+.mat-drawer.mat-drawer-side{
+  max-width: 300px;
+  width: 100%;
+}
 @media(max-width: 957px){
 	.categ-container {
 		top: 35px;
