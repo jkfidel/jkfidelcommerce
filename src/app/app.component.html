@@ -2,24 +2,24 @@
   <mat-sidenav #sidenav>
     <p><span class="brand">Lorem</span></p>
     <p>
-      <button mat-button routerLink="" [class.activated]="currentUrl == '/'">
+      <button mat-button routerLink="" [class.activated]="currentUrl == '/'" (click)="sidenav.close()">
         <span class="nav-men">HOME</span>
       </button>
     </p>
     <p>
-      <button mat-button routerLink="shop" [class.activated]="currentUrl == '/shop'">
+      <button mat-button routerLink="shop" [class.activated]="currentUrl == '/shop'" (click)="sidenav.close()">
         <span class="nav-men" >SHOP</span>
       </button>
     </p>
     
     <p>
-      <button mat-button routerLink="contact" [class.activated]="currentUrl == '/contact'">
+      <button mat-button routerLink="contact" [class.activated]="currentUrl == '/contact'" (click)="sidenav.close()">
         <span class="nav-men">CONTACT</span>
       </button>
     </p>
     
     <p>
-      <button mat-button routerLink="about" [class.activated]="currentUrl == '/about'">
+      <button mat-button routerLink="about" [class.activated]="currentUrl == '/about'" (click)="sidenav.close()">
         <span class="nav-men">ABOUT US</span>
       </button>
     </p>

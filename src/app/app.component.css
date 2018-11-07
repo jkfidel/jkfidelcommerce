@@ -90,6 +90,10 @@
 .activated{
   border-bottom: 5px solid #d3d3d3;
 }
+#sidenav .mat-button{
+  min-width: 200px !important;
+  text-align: left;
+}
 @media(min-width: 958px){
   .mbar{
     display: none;
