@@ -28,7 +28,7 @@ export class SliderComponent implements OnInit {
   dotColor: string = '#000';
   showCaptions: boolean = true;
   captionColor: string = '#FFF';
-  captionBackground: string = 'rgba(0, 0, 0, .35)';
+  captionBackground: string = 'rgba(0, 0, 0, .0)';
   lazyLoad: boolean = false;
   hideOnNoSlides: boolean = false;
   width: string = '100%';
