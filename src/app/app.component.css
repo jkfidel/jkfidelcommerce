@@ -94,6 +94,9 @@
   min-width: 200px !important;
   text-align: left;
 }
+.mat-button .mat-button-focus-overlay{
+  display: none;
+}
 @media(min-width: 958px){
   .mbar{
     display: none;
@@ -116,6 +119,5 @@
   .rytcon span{ display: none; }
 }
 button:focus{
-outline: none;
-background-color: none;
+  outline: none;
 }
