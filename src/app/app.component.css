@@ -115,3 +115,7 @@
   .rytcon{ width: 40px; }
   .rytcon span{ display: none; }
 }
+button:focus{
+outline: none;
+background-color: none;
+}

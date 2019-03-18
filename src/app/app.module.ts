@@ -20,7 +20,11 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import {FlexLayoutModule} from '@angular/flex-layout';
 
 import { Ng5SliderModule } from 'ng5-slider';
+import { SliderComponent } from './components/home/slider/slider.component';
+// import { SlideshowComponent } from './components/home/slider/slideshow/slideshow.component';
 
+import { SlideshowModule } from '../../public_api';
+// import { NO_ERRORS_SCHEMA } from '@angular/core';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +32,9 @@ import { Ng5SliderModule } from 'ng5-slider';
     ShopComponent,
     HomeComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    SliderComponent
+    // SlideshowComponent
   ],
   imports: [
     BrowserModule,
@@ -54,9 +60,11 @@ import { Ng5SliderModule } from 'ng5-slider';
     FormsModule,
     ReactiveFormsModule,
     FlexLayoutModule,
-    Ng5SliderModule
+    Ng5SliderModule,
+    SlideshowModule
   ],
   providers: [CustomIconService, SidenavService, WindowRef ],
   bootstrap: [AppComponent]
+  // schemas: [ NO_ERRORS_SCHEMA ]
 })
 export class AppModule { }
